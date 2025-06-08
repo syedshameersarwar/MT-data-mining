@@ -2,3 +2,5 @@ Features*
 compare.py
 *.txt
 __pycache__
+outputs/
+venv/
