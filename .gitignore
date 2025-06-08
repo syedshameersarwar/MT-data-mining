@@ -1,6 +1,6 @@
 Features*
 compare.py
-*.txt
+to_be_compare.txt
 __pycache__
 outputs/
 venv/
