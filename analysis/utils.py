@@ -357,7 +357,10 @@ class SignalData:
         return df, contraction_count_df
 
     def merge_cases_by_drug_and_baseline(
-        self, cases_dict: Dict[str, List], discard_concentrations: bool = False
+        self,
+        cases_dict: Dict[str, List],
+        discard_concentrations: bool = False,
+        include_baseline: bool = False,
     ):
         """
         Merge cases by drug type and baseline concentration.
@@ -381,7 +384,7 @@ class SignalData:
                 if case_conc == baseline_conc:
                     self.baseline_cases = pd.concat([self.baseline_cases, case_df])
                     # if we have to discard some concentrations, we also add the drug's baseline to selected concentrations
-                    if discard_concentrations:
+                    if discard_concentrations or include_baseline:
                         drug_df = pd.concat([drug_df, case_df])
                 else:
                     drug_df = pd.concat([drug_df, case_df])
@@ -392,6 +395,19 @@ class SignalData:
                         self.get_discarded_concentrations(drug)
                     )
                 ]
+            if include_baseline:
+                setattr(
+                    self,
+                    f"{drug.replace('-', '')}_selected_concentrations",
+                    [str(baseline_conc)]
+                    + [
+                        c
+                        for c in sorted(
+                            drug_df["concentration[um]"].unique().astype(str).tolist()
+                        )
+                        if c != str(baseline_conc)
+                    ],
+                )
             setattr(
                 self,
                 f"{drug.replace('-', '')}_cases",

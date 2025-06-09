@@ -1,3 +1,49 @@
+"""
+Advanced Visualization System for Bootstrap Correlation Analysis
+
+This module provides a comprehensive suite of publication-quality visualization tools
+specifically designed for cardiac electrophysiology correlation analysis. The visualizations
+combine statistical rigor with clear scientific communication to support research
+publication and clinical interpretation.
+
+Scientific Visualization Philosophy:
+    The module implements evidence-based visualization principles for correlation analysis:
+
+    1. Statistical Transparency: All uncertainty is explicitly visualized
+    2. Multi-modal Representation: Different plot types reveal different insights
+    3. Comparative Analysis: Cross-treatment visualization for mechanism discovery
+    4. Publication Standards: LaTeX-compatible formatting and professional aesthetics
+    5. Interactive Interpretation: Flexible display options for different audiences
+
+Key Visualization Types:
+    1. Correlation Grid Plots:
+       - Lower triangular matrix layout showing all feature pairs
+       - Histogram + KDE overlays for distribution visualization
+       - Boxplots for quartile and outlier identification
+       - Statistical annotations (mean, std) for quick assessment
+
+    2. Comparative Line Plots:
+       - Treatment effects on correlation patterns
+       - Confidence interval visualization with error bands
+       - Feature pair ranking by correlation strength
+       - Both named and numbered display modes
+
+    3. Venn Diagrams:
+       - Overlap analysis of significant correlations across treatments
+       - Set-based visualization of correlation patterns
+       - Treatment-specific and common correlation identification
+
+Technical Implementation:
+    - LaTeX-compatible figure sizing for thesis integration
+    - Consistent color schemes and typography
+    - Efficient memory management for large correlation matrices
+    - Modular design for easy customization and extension
+    - Automated directory structure creation
+
+Dependencies: matplotlib, matplotlib-venn, pandas, numpy, scipy, pathlib
+Author: Cardiac Electrophysiology Research Team
+"""
+
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Set
 import pandas as pd
@@ -14,27 +60,147 @@ from utils import FeatureMapping
 
 class CorrelationVisualizer:
     """
-    Class to handle visualization of correlation analysis results.
+    Publication-Quality Visualization Suite for Cardiac Correlation Analysis
 
-    This class creates various visualizations including:
-    - Venn diagrams of correlated features across drugs
-    - Grid plots of correlation distributions (histograms and boxplots)
-    - Line plots comparing correlations across different drugs
+    This class provides a comprehensive visualization framework specifically designed
+    for cardiac electrophysiology correlation analysis. It creates publication-ready
+    figures that effectively communicate complex correlation patterns across different
+    drug treatments while maintaining statistical rigor and scientific clarity.
 
-    The class handles both numbered and named feature pairs, and supports
-    customization of plot dimensions and appearance.
+    Visualization Design Principles:
+        1. Statistical Accuracy: All plots accurately represent uncertainty and distributions
+        2. Scientific Communication: Clear visual hierarchy and intuitive interpretation
+        3. Publication Standards: LaTeX-compatible sizing and professional aesthetics
+        4. Comparative Analysis: Consistent visual encoding across treatment conditions
+        5. Multi-scale Display: From detailed distributions to high-level pattern summaries
+
+    Core Visualization Types:
+
+        1. Correlation Grid Plots:
+           Purpose: Detailed examination of individual correlation distributions
+           - Layout: Lower triangular matrix avoiding redundant pairs
+           - Components: Histograms with KDE overlays, boxplots with quartiles
+           - Annotations: Mean ± standard deviation for each distribution
+           - Usage: Deep dive analysis of specific treatment conditions
+
+        2. Comparative Line Plots:
+           Purpose: Cross-treatment correlation pattern analysis
+           - Layout: Feature pairs ranked by baseline correlation strength
+           - Components: Mean correlations with 95% confidence intervals
+           - Modes: Named features (scientific) vs numbered pairs (compact)
+           - Usage: Treatment effect identification and mechanism discovery
+
+        3. Venn Diagrams:
+           Purpose: Set-based analysis of significant correlation overlap
+           - Layout: Three-circle Venn diagram for three treatments
+           - Components: Overlap regions with correlation count annotations
+           - Coloring: Treatment-specific color coding with transparency
+           - Usage: Identifying treatment-specific vs common correlation patterns
+
+    Technical Features:
+        - LaTeX Integration: Figure sizing optimized for thesis/journal submission
+        - Memory Efficiency: Optimized for large correlation matrices (>1000 pairs)
+        - Modular Design: Individual plot methods for custom analysis workflows
+        - Consistent Aesthetics: Standardized color schemes and typography
+        - Automated Organization: Self-managing directory structure for outputs
+
+    Output Organization:
+        The visualizer creates a structured directory hierarchy:
+
+        output_path/
+        ├── plots/
+        │   ├── drugs/
+        │   │   ├── baseline/
+        │   │   ├── e4031/
+        │   │   ├── nifedipine/
+        │   │   └── ca_titration/
+        │   └── global/
+        └── data/
 
     Attributes:
-        feature_mapping (FeatureMapping): Instance for handling feature name mappings
-        output_path (Path): Path for saving output files and plots
+        feature_mapping (FeatureMapping): Utility for converting internal feature names
+            to publication-ready scientific nomenclature
+        output_path (Path): Base directory for organizing all visualization outputs
+
+    Example Usage:
+        >>> # Initialize visualizer with output directory
+        >>> visualizer = CorrelationVisualizer(output_path='./correlation_analysis')
+        >>>
+        >>> # Create comprehensive grid plots for all treatments
+        >>> grid_plots = visualizer.create_correlation_grid_plots(
+        ...     baseline_dict, e4031_dict, nifedipine_dict, ca_titration_dict,
+        ...     feature_names=feature_list, optional_features=subset_features)
+        >>>
+        >>> # Generate comparative analysis across treatments
+        >>> comparison_fig, mapping_df = visualizer.plot_drug_correlations_comparison(
+        ...     baseline_stats, nifedipine_stats, e4031_stats, ca_titration_stats)
+        >>>
+        >>> # Create set-based analysis of correlation patterns
+        >>> venn_fig = visualizer.create_venn_diagram(combined_correlations)
+
+    Customization Options:
+        - Figure dimensions: Thesis vs beamer presentation formats
+        - Feature subsets: Focus on specific cardiac parameters
+        - Color schemes: Treatment-specific or feature-specific coloring
+        - Annotation levels: Detailed vs summary statistical information
+        - Output formats: PDF, PNG, SVG for different use cases
+
+    Scientific Applications:
+        - Drug Mechanism Discovery: Visualizing treatment-specific correlation changes
+        - Biomarker Validation: Identifying robust vs sensitive correlation patterns
+        - Model Comparison: Validating computational models against experimental data
+        - Clinical Translation: Communicating findings to clinical collaborators
+        - Thesis Documentation: Publication-ready figures for academic submission
+
+    Note:
+        All visualizations are designed to maintain statistical integrity while
+        being accessible to both statistical and biological audiences. The modular
+        design allows for easy customization and extension for specific research needs.
     """
 
     def __init__(self, output_path: str = "./"):
         """
-        Initialize the CorrelationVisualizer.
+        Initialize CorrelationVisualizer with output configuration.
+
+        Sets up the visualization framework with organized directory structure
+        and essential utilities for creating publication-quality correlation
+        analysis figures. The initializer prepares the environment for
+        systematic output organization and consistent figure generation.
 
         Args:
-            output_path (str): Base path for storing outputs (data and plots)
+            output_path (str, optional): Base directory path for storing all
+                visualization outputs. Defaults to current directory ("./").
+                The path will be used to create organized subdirectories for
+                different types of plots and data files.
+
+        Initialization Process:
+            1. Convert output path to Path object for robust file handling
+            2. Initialize feature mapping utility for scientific nomenclature
+            3. Create organized directory structure for different output types
+            4. Prepare visualization parameters and styling defaults
+
+        Directory Structure Created:
+            output_path/
+            ├── data/           # CSV files and statistical summaries
+            ├── plots/
+            │   ├── drugs/      # Treatment-specific visualization
+            │   │   ├── baseline/
+            │   │   ├── e4031/
+            │   │   ├── nifedipine/
+            │   │   └── ca_titration/
+            │   └── global/     # Cross-treatment comparative plots
+
+        Example:
+            >>> # Standard setup with default location
+            >>> visualizer = CorrelationVisualizer()
+            >>>
+            >>> # Custom output directory for organized project
+            >>> visualizer = CorrelationVisualizer(
+            ...     output_path='./correlation_analysis_results')
+            >>>
+            >>> # Absolute path specification
+            >>> visualizer = CorrelationVisualizer(
+            ...     output_path='/path/to/thesis/figures/correlations')
         """
         self.feature_mapping = FeatureMapping()
         self.output_path = Path(output_path)

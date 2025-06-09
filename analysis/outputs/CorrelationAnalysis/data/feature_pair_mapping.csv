@@ -1,0 +1,154 @@
+feature_pair,feature1,feature2,thesis_feature_pair,id
+calc_width_0.2 s vs calc_width_0.5 s,calc_width_0.2 s,calc_width_0.5 s,Ca$^{2+}$ Width 0.2 [s] vs Ca$^{2+}$ Width 0.5 [s],1
+calc_decay_time_0.2_0.8 s vs calc_width_0.2 s,calc_decay_time_0.2_0.8 s,calc_width_0.2 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ Width 0.2 [s],2
+force_width_0.2 s vs force_width_0.5 s,force_width_0.2 s,force_width_0.5 s,Force Width 0.2 [s] vs Force Width 0.5 [s],3
+calc_width_0.5 s vs force_decay_time_0.2_0.8 s,calc_width_0.5 s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ Width 0.5 [s] vs Force DT 0.2-0.8 [s],4
+force_width_0.5 s vs force_width_0.8 s,force_width_0.5 s,force_width_0.8 s,Force Width 0.5 [s] vs Force Width 0.8 [s],5
+calc_width_0.5 s vs force_width_0.2 s,calc_width_0.5 s,force_width_0.2 s,Ca$^{2+}$ Width 0.5 [s] vs Force Width 0.2 [s],6
+calc_width_0.2 s vs force_width_0.2 s,calc_width_0.2 s,force_width_0.2 s,Ca$^{2+}$ Width 0.2 [s] vs Force Width 0.2 [s],7
+force_width_0.2 s vs force_width_0.8 s,force_width_0.2 s,force_width_0.8 s,Force Width 0.2 [s] vs Force Width 0.8 [s],8
+calc_width_0.2 s vs force_decay_time_0.2_0.8 s,calc_width_0.2 s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ Width 0.2 [s] vs Force DT 0.2-0.8 [s],9
+calc_width_0.5 s vs force_width_0.5 s,calc_width_0.5 s,force_width_0.5 s,Ca$^{2+}$ Width 0.5 [s] vs Force Width 0.5 [s],10
+calc_width_0.2 s vs force_width_0.5 s,calc_width_0.2 s,force_width_0.5 s,Ca$^{2+}$ Width 0.2 [s] vs Force Width 0.5 [s],11
+calc_width_0.5 s vs calc_width_0.8 s,calc_width_0.5 s,calc_width_0.8 s,Ca$^{2+}$ Width 0.5 [s] vs Ca$^{2+}$ Width 0.8 [s],12
+force_decay_time_0.2_0.8 s vs force_width_0.5 s,force_decay_time_0.2_0.8 s,force_width_0.5 s,Force DT 0.2-0.8 [s] vs Force Width 0.5 [s],13
+force_decay_time_0.2_0.8 s vs force_width_0.2 s,force_decay_time_0.2_0.8 s,force_width_0.2 s,Force DT 0.2-0.8 [s] vs Force Width 0.2 [s],14
+calc_width_0.5 s vs force_width_0.8 s,calc_width_0.5 s,force_width_0.8 s,Ca$^{2+}$ Width 0.5 [s] vs Force Width 0.8 [s],15
+force_peak_amplitude vs force_width_0.8 s,force_peak_amplitude,force_width_0.8 s,Force Peak Amplitude [mN] vs Force Width 0.8 [s],16
+calc_width_0.2 s vs force_width_0.8 s,calc_width_0.2 s,force_width_0.8 s,Ca$^{2+}$ Width 0.2 [s] vs Force Width 0.8 [s],17
+calc_decay_time_0.2_0.8 s vs force_width_0.2 s,calc_decay_time_0.2_0.8 s,force_width_0.2 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force Width 0.2 [s],18
+force_decay_time_0.2_0.8 s vs force_width_0.8 s,force_decay_time_0.2_0.8 s,force_width_0.8 s,Force DT 0.2-0.8 [s] vs Force Width 0.8 [s],19
+calc_decay_time_0.2_0.8 s vs calc_width_0.5 s,calc_decay_time_0.2_0.8 s,calc_width_0.5 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ Width 0.5 [s],20
+force_peak_amplitude vs force_width_0.2 s,force_peak_amplitude,force_width_0.2 s,Force Peak Amplitude [mN] vs Force Width 0.2 [s],21
+calc_decay_time_0.2_0.8 s vs force_width_0.5 s,calc_decay_time_0.2_0.8 s,force_width_0.5 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force Width 0.5 [s],22
+calc_width_0.2 s vs calc_width_0.8 s,calc_width_0.2 s,calc_width_0.8 s,Ca$^{2+}$ Width 0.2 [s] vs Ca$^{2+}$ Width 0.8 [s],23
+calc_width_0.8 s vs force_decay_time_0.2_0.8 s,calc_width_0.8 s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ Width 0.8 [s] vs Force DT 0.2-0.8 [s],24
+calc_decay_time_0.2_0.8 s vs force_decay_time_0.2_0.8 s,calc_decay_time_0.2_0.8 s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force DT 0.2-0.8 [s],25
+calc_width_0.8 s vs force_width_0.2 s,calc_width_0.8 s,force_width_0.2 s,Ca$^{2+}$ Width 0.8 [s] vs Force Width 0.2 [s],26
+calc_width_0.5 s vs force_peak_amplitude,calc_width_0.5 s,force_peak_amplitude,Ca$^{2+}$ Width 0.5 [s] vs Force Peak Amplitude [mN],27
+force_peak_amplitude vs force_width_0.5 s,force_peak_amplitude,force_width_0.5 s,Force Peak Amplitude [mN] vs Force Width 0.5 [s],28
+calc_width_0.2 s vs force_peak_amplitude,calc_width_0.2 s,force_peak_amplitude,Ca$^{2+}$ Width 0.2 [s] vs Force Peak Amplitude [mN],29
+calc_width_0.8 s vs force_width_0.5 s,calc_width_0.8 s,force_width_0.5 s,Ca$^{2+}$ Width 0.8 [s] vs Force Width 0.5 [s],30
+calc_decay_time_0.2_0.8 s vs force_width_0.8 s,calc_decay_time_0.2_0.8 s,force_width_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force Width 0.8 [s],31
+force_decay_time_0.2_0.8 s vs force_peak_amplitude,force_decay_time_0.2_0.8 s,force_peak_amplitude,Force DT 0.2-0.8 [s] vs Force Peak Amplitude [mN],32
+calc_decay_time_max_0.8 s vs calc_width_0.8 s,calc_decay_time_max_0.8 s,calc_width_0.8 s,Ca$^{2+}$ DT Max-0.8 [s] vs Ca$^{2+}$ Width 0.8 [s],33
+calc_decay_time_0.2_0.8 s vs force_peak_amplitude,calc_decay_time_0.2_0.8 s,force_peak_amplitude,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force Peak Amplitude [mN],34
+calc_width_0.8 s vs force_width_0.8 s,calc_width_0.8 s,force_width_0.8 s,Ca$^{2+}$ Width 0.8 [s] vs Force Width 0.8 [s],35
+calc_width_0.8 s vs force_peak_amplitude,calc_width_0.8 s,force_peak_amplitude,Ca$^{2+}$ Width 0.8 [s] vs Force Peak Amplitude [mN],36
+force_decay_time_max_0.8 s vs force_width_0.5 s,force_decay_time_max_0.8 s,force_width_0.5 s,Force DT Max-0.8 [s] vs Force Width 0.5 [s],37
+force_decay_time_max_0.8 s vs force_width_0.8 s,force_decay_time_max_0.8 s,force_width_0.8 s,Force DT Max-0.8 [s] vs Force Width 0.8 [s],38
+force_decay_time_max_0.8 s vs force_width_0.2 s,force_decay_time_max_0.8 s,force_width_0.2 s,Force DT Max-0.8 [s] vs Force Width 0.2 [s],39
+force_decay_time_0.2_0.8 s vs force_decay_time_max_0.8 s,force_decay_time_0.2_0.8 s,force_decay_time_max_0.8 s,Force DT 0.2-0.8 [s] vs Force DT Max-0.8 [s],40
+force_decay_time_max_0.8 s vs force_peak_amplitude,force_decay_time_max_0.8 s,force_peak_amplitude,Force DT Max-0.8 [s] vs Force Peak Amplitude [mN],41
+calc_width_0.5 s vs force_decay_time_max_0.8 s,calc_width_0.5 s,force_decay_time_max_0.8 s,Ca$^{2+}$ Width 0.5 [s] vs Force DT Max-0.8 [s],42
+calc_width_0.2 s vs force_decay_time_max_0.8 s,calc_width_0.2 s,force_decay_time_max_0.8 s,Ca$^{2+}$ Width 0.2 [s] vs Force DT Max-0.8 [s],43
+calc_decay_time_max_0.8 s vs calc_width_0.5 s,calc_decay_time_max_0.8 s,calc_width_0.5 s,Ca$^{2+}$ DT Max-0.8 [s] vs Ca$^{2+}$ Width 0.5 [s],44
+calc_decay_time_0.2_0.8 s vs force_decay_time_max_0.8 s,calc_decay_time_0.2_0.8 s,force_decay_time_max_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force DT Max-0.8 [s],45
+calc_decay_time_0.2_0.8 s vs calc_width_0.8 s,calc_decay_time_0.2_0.8 s,calc_width_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ Width 0.8 [s],46
+calc_decay_time_max_0.8 s vs calc_width_0.2 s,calc_decay_time_max_0.8 s,calc_width_0.2 s,Ca$^{2+}$ DT Max-0.8 [s] vs Ca$^{2+}$ Width 0.2 [s],47
+calc_width_0.8 s vs force_decay_time_max_0.8 s,calc_width_0.8 s,force_decay_time_max_0.8 s,Ca$^{2+}$ Width 0.8 [s] vs Force DT Max-0.8 [s],48
+calc_decay_time_max_0.8 s vs force_width_0.2 s,calc_decay_time_max_0.8 s,force_width_0.2 s,Ca$^{2+}$ DT Max-0.8 [s] vs Force Width 0.2 [s],49
+calc_decay_time_max_0.8 s vs force_decay_time_0.2_0.8 s,calc_decay_time_max_0.8 s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ DT Max-0.8 [s] vs Force DT 0.2-0.8 [s],50
+calc_decay_time_max_0.8 s vs force_width_0.8 s,calc_decay_time_max_0.8 s,force_width_0.8 s,Ca$^{2+}$ DT Max-0.8 [s] vs Force Width 0.8 [s],51
+calc_decay_time_max_0.8 s vs force_width_0.5 s,calc_decay_time_max_0.8 s,force_width_0.5 s,Ca$^{2+}$ DT Max-0.8 [s] vs Force Width 0.5 [s],52
+calc_decay_time_max_0.8 s vs force_peak_amplitude,calc_decay_time_max_0.8 s,force_peak_amplitude,Ca$^{2+}$ DT Max-0.8 [s] vs Force Peak Amplitude [mN],53
+calc_decay_time_max_0.8 s vs force_decay_time_max_0.8 s,calc_decay_time_max_0.8 s,force_decay_time_max_0.8 s,Ca$^{2+}$ DT Max-0.8 [s] vs Force DT Max-0.8 [s],54
+calc_decay_time_0.2_0.8 s vs calc_decay_time_max_0.8 s,calc_decay_time_0.2_0.8 s,calc_decay_time_max_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ DT Max-0.8 [s],55
+calc_decay_time_0.2_0.8 s vs force_rise_time_0.8_max s,calc_decay_time_0.2_0.8 s,force_rise_time_0.8_max s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force RT 0.8-Max [s],56
+force_rise_time_0.8_max s vs force_width_0.5 s,force_rise_time_0.8_max s,force_width_0.5 s,Force RT 0.8-Max [s] vs Force Width 0.5 [s],57
+force_rise_time_0.8_max s vs force_width_0.2 s,force_rise_time_0.8_max s,force_width_0.2 s,Force RT 0.8-Max [s] vs Force Width 0.2 [s],58
+calc_width_0.2 s vs force_rise_time_0.8_max s,calc_width_0.2 s,force_rise_time_0.8_max s,Ca$^{2+}$ Width 0.2 [s] vs Force RT 0.8-Max [s],59
+force_peak_amplitude vs force_rise_time_0.8_max s,force_peak_amplitude,force_rise_time_0.8_max s,Force Peak Amplitude [mN] vs Force RT 0.8-Max [s],60
+force_rise_time_0.8_max s vs force_width_0.8 s,force_rise_time_0.8_max s,force_width_0.8 s,Force RT 0.8-Max [s] vs Force Width 0.8 [s],61
+calc_width_0.5 s vs force_rise_time_0.8_max s,calc_width_0.5 s,force_rise_time_0.8_max s,Ca$^{2+}$ Width 0.5 [s] vs Force RT 0.8-Max [s],62
+force_decay_time_0.2_0.8 s vs force_rise_time_0.8_max s,force_decay_time_0.2_0.8 s,force_rise_time_0.8_max s,Force DT 0.2-0.8 [s] vs Force RT 0.8-Max [s],63
+calc_rise_time_0.2_0.8 s vs force_rise_time_0.2_0.8 s,calc_rise_time_0.2_0.8 s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force RT 0.2-0.8 [s],64
+calc_width_0.8 s vs force_rise_time_0.8_max s,calc_width_0.8 s,force_rise_time_0.8_max s,Ca$^{2+}$ Width 0.8 [s] vs Force RT 0.8-Max [s],65
+calc_rise_time_0.8_max s vs force_width_0.5 s,calc_rise_time_0.8_max s,force_width_0.5 s,Ca$^{2+}$ RT 0.8-Max [s] vs Force Width 0.5 [s],66
+calc_rise_time_0.8_max s vs force_decay_time_0.2_0.8 s,calc_rise_time_0.8_max s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ RT 0.8-Max [s] vs Force DT 0.2-0.8 [s],67
+calc_rise_time_0.8_max s vs calc_width_0.2 s,calc_rise_time_0.8_max s,calc_width_0.2 s,Ca$^{2+}$ RT 0.8-Max [s] vs Ca$^{2+}$ Width 0.2 [s],68
+calc_rise_time_0.8_max s vs calc_width_0.5 s,calc_rise_time_0.8_max s,calc_width_0.5 s,Ca$^{2+}$ RT 0.8-Max [s] vs Ca$^{2+}$ Width 0.5 [s],69
+calc_rise_time_0.8_max s vs force_width_0.8 s,calc_rise_time_0.8_max s,force_width_0.8 s,Ca$^{2+}$ RT 0.8-Max [s] vs Force Width 0.8 [s],70
+calc_decay_time_0.2_0.8 s vs calc_rise_time_0.8_max s,calc_decay_time_0.2_0.8 s,calc_rise_time_0.8_max s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ RT 0.8-Max [s],71
+calc_rise_time_0.8_max s vs force_width_0.2 s,calc_rise_time_0.8_max s,force_width_0.2 s,Ca$^{2+}$ RT 0.8-Max [s] vs Force Width 0.2 [s],72
+force_decay_time_max_0.8 s vs force_rise_time_0.8_max s,force_decay_time_max_0.8 s,force_rise_time_0.8_max s,Force DT Max-0.8 [s] vs Force RT 0.8-Max [s],73
+calc_rise_time_0.8_max s vs force_peak_amplitude,calc_rise_time_0.8_max s,force_peak_amplitude,Ca$^{2+}$ RT 0.8-Max [s] vs Force Peak Amplitude [mN],74
+calc_rise_time_0.8_max s vs force_rise_time_0.8_max s,calc_rise_time_0.8_max s,force_rise_time_0.8_max s,Ca$^{2+}$ RT 0.8-Max [s] vs Force RT 0.8-Max [s],75
+calc_rise_time_0.8_max s vs calc_width_0.8 s,calc_rise_time_0.8_max s,calc_width_0.8 s,Ca$^{2+}$ RT 0.8-Max [s] vs Ca$^{2+}$ Width 0.8 [s],76
+duration vs force_peak_amplitude,duration,force_peak_amplitude,FPD [s] vs Force Peak Amplitude [mN],77
+calc_rise_time_0.8_max s vs force_decay_time_max_0.8 s,calc_rise_time_0.8_max s,force_decay_time_max_0.8 s,Ca$^{2+}$ RT 0.8-Max [s] vs Force DT Max-0.8 [s],78
+duration vs force_width_0.8 s,duration,force_width_0.8 s,FPD [s] vs Force Width 0.8 [s],79
+calc_decay_time_max_0.8 s vs force_rise_time_0.8_max s,calc_decay_time_max_0.8 s,force_rise_time_0.8_max s,Ca$^{2+}$ DT Max-0.8 [s] vs Force RT 0.8-Max [s],80
+calc_rise_time_0.8_max s vs local_frequency[Hz],calc_rise_time_0.8_max s,local_frequency[Hz],Ca$^{2+}$ RT 0.8-Max [s] vs Local Frequency [Hz],81
+duration vs force_width_0.2 s,duration,force_width_0.2 s,FPD [s] vs Force Width 0.2 [s],82
+force_rise_time_0.2_0.8 s vs force_width_0.5 s,force_rise_time_0.2_0.8 s,force_width_0.5 s,Force RT 0.2-0.8 [s] vs Force Width 0.5 [s],83
+calc_decay_time_0.2_0.8 s vs duration,calc_decay_time_0.2_0.8 s,duration,Ca$^{2+}$ DT 0.2-0.8 [s] vs FPD [s],84
+duration vs force_decay_time_max_0.8 s,duration,force_decay_time_max_0.8 s,FPD [s] vs Force DT Max-0.8 [s],85
+force_decay_time_0.2_0.8 s vs force_rise_time_0.2_0.8 s,force_decay_time_0.2_0.8 s,force_rise_time_0.2_0.8 s,Force DT 0.2-0.8 [s] vs Force RT 0.2-0.8 [s],86
+calc_width_0.2 s vs duration,calc_width_0.2 s,duration,Ca$^{2+}$ Width 0.2 [s] vs FPD [s],87
+force_rise_time_0.2_0.8 s vs force_width_0.2 s,force_rise_time_0.2_0.8 s,force_width_0.2 s,Force RT 0.2-0.8 [s] vs Force Width 0.2 [s],88
+calc_width_0.5 s vs duration,calc_width_0.5 s,duration,Ca$^{2+}$ Width 0.5 [s] vs FPD [s],89
+duration vs force_width_0.5 s,duration,force_width_0.5 s,FPD [s] vs Force Width 0.5 [s],90
+calc_peak_amplitude vs force_peak_amplitude,calc_peak_amplitude,force_peak_amplitude,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force Peak Amplitude [mN],91
+calc_rise_time_0.2_0.8 s vs calc_rise_time_0.8_max s,calc_rise_time_0.2_0.8 s,calc_rise_time_0.8_max s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Ca$^{2+}$ RT 0.8-Max [s],92
+calc_peak_amplitude vs force_decay_time_max_0.8 s,calc_peak_amplitude,force_decay_time_max_0.8 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force DT Max-0.8 [s],93
+calc_width_0.8 s vs force_rise_time_0.2_0.8 s,calc_width_0.8 s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ Width 0.8 [s] vs Force RT 0.2-0.8 [s],94
+calc_width_0.5 s vs force_rise_time_0.2_0.8 s,calc_width_0.5 s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ Width 0.5 [s] vs Force RT 0.2-0.8 [s],95
+calc_width_0.2 s vs force_rise_time_0.2_0.8 s,calc_width_0.2 s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ Width 0.2 [s] vs Force RT 0.2-0.8 [s],96
+calc_rise_time_0.2_0.8 s vs duration,calc_rise_time_0.2_0.8 s,duration,Ca$^{2+}$ RT 0.2-0.8 [s] vs FPD [s],97
+force_rise_time_0.2_0.8 s vs force_rise_time_0.8_max s,force_rise_time_0.2_0.8 s,force_rise_time_0.8_max s,Force RT 0.2-0.8 [s] vs Force RT 0.8-Max [s],98
+duration vs local_frequency[Hz],duration,local_frequency[Hz],FPD [s] vs Local Frequency [Hz],99
+calc_decay_time_max_0.8 s vs duration,calc_decay_time_max_0.8 s,duration,Ca$^{2+}$ DT Max-0.8 [s] vs FPD [s],100
+calc_peak_amplitude vs force_width_0.8 s,calc_peak_amplitude,force_width_0.8 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force Width 0.8 [s],101
+duration vs force_decay_time_0.2_0.8 s,duration,force_decay_time_0.2_0.8 s,FPD [s] vs Force DT 0.2-0.8 [s],102
+calc_width_0.8 s vs duration,calc_width_0.8 s,duration,Ca$^{2+}$ Width 0.8 [s] vs FPD [s],103
+force_decay_time_max_0.8 s vs force_rise_time_0.2_0.8 s,force_decay_time_max_0.8 s,force_rise_time_0.2_0.8 s,Force DT Max-0.8 [s] vs Force RT 0.2-0.8 [s],104
+calc_decay_time_0.2_0.8 s vs calc_peak_amplitude,calc_decay_time_0.2_0.8 s,calc_peak_amplitude,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ Peak Amplitude [a.u.],105
+calc_rise_time_0.8_max s vs force_rise_time_0.2_0.8 s,calc_rise_time_0.8_max s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ RT 0.8-Max [s] vs Force RT 0.2-0.8 [s],106
+force_rise_time_0.2_0.8 s vs force_width_0.8 s,force_rise_time_0.2_0.8 s,force_width_0.8 s,Force RT 0.2-0.8 [s] vs Force Width 0.8 [s],107
+calc_rise_time_0.2_0.8 s vs force_width_0.5 s,calc_rise_time_0.2_0.8 s,force_width_0.5 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force Width 0.5 [s],108
+calc_decay_time_max_0.8 s vs force_rise_time_0.2_0.8 s,calc_decay_time_max_0.8 s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ DT Max-0.8 [s] vs Force RT 0.2-0.8 [s],109
+calc_peak_amplitude vs force_decay_time_0.2_0.8 s,calc_peak_amplitude,force_decay_time_0.2_0.8 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force DT 0.2-0.8 [s],110
+calc_decay_time_0.2_0.8 s vs force_rise_time_0.2_0.8 s,calc_decay_time_0.2_0.8 s,force_rise_time_0.2_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Force RT 0.2-0.8 [s],111
+calc_peak_amplitude vs force_width_0.5 s,calc_peak_amplitude,force_width_0.5 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force Width 0.5 [s],112
+calc_peak_amplitude vs force_width_0.2 s,calc_peak_amplitude,force_width_0.2 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force Width 0.2 [s],113
+calc_rise_time_0.2_0.8 s vs force_width_0.2 s,calc_rise_time_0.2_0.8 s,force_width_0.2 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force Width 0.2 [s],114
+duration vs force_rise_time_0.8_max s,duration,force_rise_time_0.8_max s,FPD [s] vs Force RT 0.8-Max [s],115
+calc_peak_amplitude vs calc_width_0.5 s,calc_peak_amplitude,calc_width_0.5 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Ca$^{2+}$ Width 0.5 [s],116
+calc_peak_amplitude vs calc_width_0.2 s,calc_peak_amplitude,calc_width_0.2 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Ca$^{2+}$ Width 0.2 [s],117
+calc_rise_time_0.2_0.8 s vs calc_width_0.2 s,calc_rise_time_0.2_0.8 s,calc_width_0.2 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Ca$^{2+}$ Width 0.2 [s],118
+calc_rise_time_0.2_0.8 s vs force_decay_time_0.2_0.8 s,calc_rise_time_0.2_0.8 s,force_decay_time_0.2_0.8 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force DT 0.2-0.8 [s],119
+calc_rise_time_0.8_max s vs duration,calc_rise_time_0.8_max s,duration,Ca$^{2+}$ RT 0.8-Max [s] vs FPD [s],120
+calc_rise_time_0.2_0.8 s vs calc_width_0.5 s,calc_rise_time_0.2_0.8 s,calc_width_0.5 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Ca$^{2+}$ Width 0.5 [s],121
+calc_decay_time_max_0.8 s vs calc_peak_amplitude,calc_decay_time_max_0.8 s,calc_peak_amplitude,Ca$^{2+}$ DT Max-0.8 [s] vs Ca$^{2+}$ Peak Amplitude [a.u.],122
+calc_peak_amplitude vs calc_width_0.8 s,calc_peak_amplitude,calc_width_0.8 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Ca$^{2+}$ Width 0.8 [s],123
+calc_rise_time_0.2_0.8 s vs force_width_0.8 s,calc_rise_time_0.2_0.8 s,force_width_0.8 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force Width 0.8 [s],124
+calc_rise_time_0.2_0.8 s vs local_frequency[Hz],calc_rise_time_0.2_0.8 s,local_frequency[Hz],Ca$^{2+}$ RT 0.2-0.8 [s] vs Local Frequency [Hz],125
+calc_rise_time_0.2_0.8 s vs force_rise_time_0.8_max s,calc_rise_time_0.2_0.8 s,force_rise_time_0.8_max s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force RT 0.8-Max [s],126
+calc_rise_time_0.2_0.8 s vs calc_width_0.8 s,calc_rise_time_0.2_0.8 s,calc_width_0.8 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Ca$^{2+}$ Width 0.8 [s],127
+calc_decay_time_0.2_0.8 s vs calc_rise_time_0.2_0.8 s,calc_decay_time_0.2_0.8 s,calc_rise_time_0.2_0.8 s,Ca$^{2+}$ DT 0.2-0.8 [s] vs Ca$^{2+}$ RT 0.2-0.8 [s],128
+calc_rise_time_0.2_0.8 s vs force_decay_time_max_0.8 s,calc_rise_time_0.2_0.8 s,force_decay_time_max_0.8 s,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force DT Max-0.8 [s],129
+force_peak_amplitude vs local_frequency[Hz],force_peak_amplitude,local_frequency[Hz],Force Peak Amplitude [mN] vs Local Frequency [Hz],130
+calc_decay_time_max_0.8 s vs calc_rise_time_0.2_0.8 s,calc_decay_time_max_0.8 s,calc_rise_time_0.2_0.8 s,Ca$^{2+}$ DT Max-0.8 [s] vs Ca$^{2+}$ RT 0.2-0.8 [s],131
+force_peak_amplitude vs force_rise_time_0.2_0.8 s,force_peak_amplitude,force_rise_time_0.2_0.8 s,Force Peak Amplitude [mN] vs Force RT 0.2-0.8 [s],132
+force_rise_time_0.8_max s vs local_frequency[Hz],force_rise_time_0.8_max s,local_frequency[Hz],Force RT 0.8-Max [s] vs Local Frequency [Hz],133
+calc_decay_time_max_0.8 s vs calc_rise_time_0.8_max s,calc_decay_time_max_0.8 s,calc_rise_time_0.8_max s,Ca$^{2+}$ DT Max-0.8 [s] vs Ca$^{2+}$ RT 0.8-Max [s],134
+calc_rise_time_0.2_0.8 s vs force_peak_amplitude,calc_rise_time_0.2_0.8 s,force_peak_amplitude,Ca$^{2+}$ RT 0.2-0.8 [s] vs Force Peak Amplitude [mN],135
+calc_peak_amplitude vs force_rise_time_0.8_max s,calc_peak_amplitude,force_rise_time_0.8_max s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force RT 0.8-Max [s],136
+force_width_0.8 s vs local_frequency[Hz],force_width_0.8 s,local_frequency[Hz],Force Width 0.8 [s] vs Local Frequency [Hz],137
+calc_peak_amplitude vs calc_rise_time_0.8_max s,calc_peak_amplitude,calc_rise_time_0.8_max s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Ca$^{2+}$ RT 0.8-Max [s],138
+calc_peak_amplitude vs duration,calc_peak_amplitude,duration,Ca$^{2+}$ Peak Amplitude [a.u.] vs FPD [s],139
+force_width_0.5 s vs local_frequency[Hz],force_width_0.5 s,local_frequency[Hz],Force Width 0.5 [s] vs Local Frequency [Hz],140
+calc_decay_time_0.2_0.8 s vs local_frequency[Hz],calc_decay_time_0.2_0.8 s,local_frequency[Hz],Ca$^{2+}$ DT 0.2-0.8 [s] vs Local Frequency [Hz],141
+duration vs force_rise_time_0.2_0.8 s,duration,force_rise_time_0.2_0.8 s,FPD [s] vs Force RT 0.2-0.8 [s],142
+calc_width_0.5 s vs local_frequency[Hz],calc_width_0.5 s,local_frequency[Hz],Ca$^{2+}$ Width 0.5 [s] vs Local Frequency [Hz],143
+calc_width_0.2 s vs local_frequency[Hz],calc_width_0.2 s,local_frequency[Hz],Ca$^{2+}$ Width 0.2 [s] vs Local Frequency [Hz],144
+force_width_0.2 s vs local_frequency[Hz],force_width_0.2 s,local_frequency[Hz],Force Width 0.2 [s] vs Local Frequency [Hz],145
+calc_width_0.8 s vs local_frequency[Hz],calc_width_0.8 s,local_frequency[Hz],Ca$^{2+}$ Width 0.8 [s] vs Local Frequency [Hz],146
+force_decay_time_0.2_0.8 s vs local_frequency[Hz],force_decay_time_0.2_0.8 s,local_frequency[Hz],Force DT 0.2-0.8 [s] vs Local Frequency [Hz],147
+calc_decay_time_max_0.8 s vs local_frequency[Hz],calc_decay_time_max_0.8 s,local_frequency[Hz],Ca$^{2+}$ DT Max-0.8 [s] vs Local Frequency [Hz],148
+force_decay_time_max_0.8 s vs local_frequency[Hz],force_decay_time_max_0.8 s,local_frequency[Hz],Force DT Max-0.8 [s] vs Local Frequency [Hz],149
+calc_peak_amplitude vs local_frequency[Hz],calc_peak_amplitude,local_frequency[Hz],Ca$^{2+}$ Peak Amplitude [a.u.] vs Local Frequency [Hz],150
+force_rise_time_0.2_0.8 s vs local_frequency[Hz],force_rise_time_0.2_0.8 s,local_frequency[Hz],Force RT 0.2-0.8 [s] vs Local Frequency [Hz],151
+calc_peak_amplitude vs force_rise_time_0.2_0.8 s,calc_peak_amplitude,force_rise_time_0.2_0.8 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Force RT 0.2-0.8 [s],152
+calc_peak_amplitude vs calc_rise_time_0.2_0.8 s,calc_peak_amplitude,calc_rise_time_0.2_0.8 s,Ca$^{2+}$ Peak Amplitude [a.u.] vs Ca$^{2+}$ RT 0.2-0.8 [s],153

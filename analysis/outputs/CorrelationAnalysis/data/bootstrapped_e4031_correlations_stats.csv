@@ -1,0 +1,154 @@
+feature1,feature2,correlation_mean,correlation_std,shapiro_p_value,is_normal,positive_proportion,negative_proportion,ci_95,correlated,correlation_type
+force_peak_amplitude,duration,0.5992,0.0935,0.0,False,1.0,0.0,"(0.389, 0.772)",True,positive
+force_width_0.5 s,duration,0.4315,0.099,0.0,False,1.0,0.0,"(0.221, 0.605)",True,positive
+force_width_0.5 s,force_peak_amplitude,0.3658,0.1179,0.0015,False,0.997,0.003,"(0.117, 0.58)",True,positive
+force_width_0.2 s,duration,0.3683,0.1272,0.0,False,0.995,0.005,"(0.112, 0.588)",True,positive
+force_width_0.2 s,force_peak_amplitude,0.2485,0.1578,0.0,False,0.928,0.072,"(-0.086, 0.525)",False,inconclusive
+force_width_0.2 s,force_width_0.5 s,0.5767,0.086,0.0,False,1.0,0.0,"(0.395, 0.726)",True,positive
+force_width_0.8 s,duration,0.2757,0.1193,0.3827,True,0.988,0.012,"(0.045, 0.504)",True,positive
+force_width_0.8 s,force_peak_amplitude,0.5168,0.1153,0.0,False,1.0,0.0,"(0.275, 0.716)",True,positive
+force_width_0.8 s,force_width_0.5 s,0.3449,0.1178,0.224,True,0.997,0.003,"(0.092, 0.572)",True,positive
+force_width_0.8 s,force_width_0.2 s,0.4614,0.1305,0.0,False,0.997,0.003,"(0.189, 0.695)",True,positive
+force_rise_time_0.2_0.8 s,duration,-0.3449,0.1151,0.0003,False,0.003,0.997,"(-0.56, -0.095)",True,negative
+force_rise_time_0.2_0.8 s,force_peak_amplitude,-0.5618,0.0818,0.0,False,0.0,1.0,"(-0.702, -0.38)",True,negative
+force_rise_time_0.2_0.8 s,force_width_0.5 s,-0.3006,0.1227,0.2016,True,0.006,0.994,"(-0.531, -0.048)",True,negative
+force_rise_time_0.2_0.8 s,force_width_0.2 s,-0.1831,0.1228,0.7911,True,0.066,0.934,"(-0.43, 0.055)",False,inconclusive
+force_rise_time_0.2_0.8 s,force_width_0.8 s,-0.2006,0.1302,0.0001,False,0.068,0.932,"(-0.428, 0.067)",False,inconclusive
+force_rise_time_0.8_max s,duration,0.0621,0.127,0.0055,False,0.671,0.329,"(-0.176, 0.293)",False,inconclusive
+force_rise_time_0.8_max s,force_peak_amplitude,-0.0959,0.1305,0.8907,True,0.246,0.754,"(-0.352, 0.159)",False,inconclusive
+force_rise_time_0.8_max s,force_width_0.5 s,-0.0403,0.1348,0.4904,True,0.39,0.61,"(-0.303, 0.237)",False,inconclusive
+force_rise_time_0.8_max s,force_width_0.2 s,0.027,0.1336,0.2092,True,0.575,0.425,"(-0.226, 0.294)",False,inconclusive
+force_rise_time_0.8_max s,force_width_0.8 s,0.0436,0.1411,0.3566,True,0.622,0.378,"(-0.235, 0.314)",False,inconclusive
+force_rise_time_0.8_max s,force_rise_time_0.2_0.8 s,0.0666,0.1384,0.2982,True,0.685,0.315,"(-0.194, 0.319)",False,inconclusive
+force_decay_time_max_0.8 s,duration,0.1004,0.1353,0.5065,True,0.776,0.224,"(-0.162, 0.362)",False,inconclusive
+force_decay_time_max_0.8 s,force_peak_amplitude,0.1233,0.1326,0.7194,True,0.822,0.178,"(-0.133, 0.366)",False,inconclusive
+force_decay_time_max_0.8 s,force_width_0.5 s,0.0872,0.1286,0.6645,True,0.753,0.247,"(-0.171, 0.325)",False,inconclusive
+force_decay_time_max_0.8 s,force_width_0.2 s,0.0185,0.1374,0.1552,True,0.561,0.439,"(-0.252, 0.271)",False,inconclusive
+force_decay_time_max_0.8 s,force_width_0.8 s,0.0278,0.138,0.0026,False,0.586,0.414,"(-0.244, 0.283)",False,inconclusive
+force_decay_time_max_0.8 s,force_rise_time_0.2_0.8 s,-0.1273,0.123,0.2933,True,0.159,0.841,"(-0.355, 0.104)",False,inconclusive
+force_decay_time_max_0.8 s,force_rise_time_0.8_max s,-0.1818,0.1313,0.0629,True,0.082,0.918,"(-0.435, 0.085)",False,inconclusive
+force_decay_time_0.2_0.8 s,duration,0.3867,0.118,0.0021,False,1.0,0.0,"(0.146, 0.602)",True,positive
+force_decay_time_0.2_0.8 s,force_peak_amplitude,0.5094,0.1177,0.0,False,1.0,0.0,"(0.249, 0.709)",True,positive
+force_decay_time_0.2_0.8 s,force_width_0.5 s,0.2936,0.1196,0.02,False,0.988,0.012,"(0.05, 0.513)",True,positive
+force_decay_time_0.2_0.8 s,force_width_0.2 s,0.4629,0.1259,0.0,False,0.997,0.003,"(0.183, 0.659)",True,positive
+force_decay_time_0.2_0.8 s,force_width_0.8 s,0.4383,0.124,0.0,False,0.999,0.001,"(0.161, 0.64)",True,positive
+force_decay_time_0.2_0.8 s,force_rise_time_0.2_0.8 s,-0.1663,0.1301,0.217,True,0.102,0.898,"(-0.414, 0.084)",False,inconclusive
+force_decay_time_0.2_0.8 s,force_rise_time_0.8_max s,-0.0621,0.1321,0.6721,True,0.317,0.683,"(-0.324, 0.205)",False,inconclusive
+force_decay_time_0.2_0.8 s,force_decay_time_max_0.8 s,0.0833,0.1374,0.0364,False,0.729,0.271,"(-0.203, 0.333)",False,inconclusive
+calc_peak_amplitude,duration,0.1062,0.131,0.6796,True,0.794,0.206,"(-0.148, 0.351)",False,inconclusive
+calc_peak_amplitude,force_peak_amplitude,0.2483,0.1236,0.0001,False,0.971,0.029,"(-0.013, 0.469)",False,inconclusive
+calc_peak_amplitude,force_width_0.5 s,-0.0962,0.1274,0.1199,True,0.232,0.768,"(-0.34, 0.158)",False,inconclusive
+calc_peak_amplitude,force_width_0.2 s,-0.1843,0.117,0.2995,True,0.063,0.937,"(-0.409, 0.049)",False,inconclusive
+calc_peak_amplitude,force_width_0.8 s,-0.09,0.1344,0.2448,True,0.257,0.743,"(-0.336, 0.176)",False,inconclusive
+calc_peak_amplitude,force_rise_time_0.2_0.8 s,-0.1149,0.1279,0.7805,True,0.187,0.813,"(-0.364, 0.132)",False,inconclusive
+calc_peak_amplitude,force_rise_time_0.8_max s,-0.0268,0.1257,0.017,False,0.427,0.573,"(-0.27, 0.212)",False,inconclusive
+calc_peak_amplitude,force_decay_time_max_0.8 s,0.0999,0.1345,0.8398,True,0.781,0.219,"(-0.163, 0.362)",False,inconclusive
+calc_peak_amplitude,force_decay_time_0.2_0.8 s,-0.1281,0.125,0.0452,False,0.154,0.846,"(-0.359, 0.119)",False,inconclusive
+calc_width_0.5 s,duration,-0.0932,0.1315,0.6991,True,0.247,0.753,"(-0.347, 0.161)",False,inconclusive
+calc_width_0.5 s,force_peak_amplitude,-0.3256,0.1164,0.2768,True,0.004,0.996,"(-0.542, -0.094)",True,negative
+calc_width_0.5 s,force_width_0.5 s,0.3485,0.1187,0.0012,False,0.999,0.001,"(0.103, 0.563)",True,positive
+calc_width_0.5 s,force_width_0.2 s,0.425,0.1212,0.0,False,1.0,0.0,"(0.16, 0.633)",True,positive
+calc_width_0.5 s,force_width_0.8 s,0.0603,0.1245,0.4891,True,0.691,0.309,"(-0.189, 0.298)",False,inconclusive
+calc_width_0.5 s,force_rise_time_0.2_0.8 s,0.1783,0.124,0.2915,True,0.925,0.075,"(-0.083, 0.413)",False,inconclusive
+calc_width_0.5 s,force_rise_time_0.8_max s,-0.0361,0.1252,0.232,True,0.388,0.612,"(-0.269, 0.225)",False,inconclusive
+calc_width_0.5 s,force_decay_time_max_0.8 s,0.0651,0.1293,0.7711,True,0.705,0.295,"(-0.193, 0.31)",False,inconclusive
+calc_width_0.5 s,force_decay_time_0.2_0.8 s,0.077,0.1128,0.6546,True,0.748,0.252,"(-0.147, 0.295)",False,inconclusive
+calc_width_0.5 s,calc_peak_amplitude,-0.3111,0.1265,0.0267,False,0.01,0.99,"(-0.549, -0.068)",True,negative
+calc_width_0.2 s,duration,-0.3491,0.1244,0.2311,True,0.002,0.998,"(-0.596, -0.1)",True,negative
+calc_width_0.2 s,force_peak_amplitude,-0.6554,0.0644,0.0,False,0.0,1.0,"(-0.762, -0.506)",True,negative
+calc_width_0.2 s,force_width_0.5 s,0.0891,0.13,0.1823,True,0.764,0.236,"(-0.178, 0.329)",False,inconclusive
+calc_width_0.2 s,force_width_0.2 s,0.1951,0.1339,0.0002,False,0.916,0.084,"(-0.075, 0.44)",False,inconclusive
+calc_width_0.2 s,force_width_0.8 s,-0.1205,0.1157,0.1653,True,0.146,0.854,"(-0.34, 0.115)",False,inconclusive
+calc_width_0.2 s,force_rise_time_0.2_0.8 s,0.339,0.1219,0.0001,False,0.994,0.006,"(0.089, 0.556)",True,positive
+calc_width_0.2 s,force_rise_time_0.8_max s,0.0427,0.1234,0.9563,True,0.629,0.37,"(-0.195, 0.287)",False,inconclusive
+calc_width_0.2 s,force_decay_time_max_0.8 s,-0.0236,0.1328,0.8777,True,0.424,0.576,"(-0.298, 0.235)",False,inconclusive
+calc_width_0.2 s,force_decay_time_0.2_0.8 s,-0.1353,0.1148,0.582,True,0.121,0.879,"(-0.359, 0.079)",False,inconclusive
+calc_width_0.2 s,calc_peak_amplitude,-0.3362,0.1182,0.0594,True,0.004,0.996,"(-0.557, -0.094)",True,negative
+calc_width_0.2 s,calc_width_0.5 s,0.7709,0.0656,0.0,False,1.0,0.0,"(0.616, 0.875)",True,positive
+calc_width_0.8 s,duration,0.1731,0.1254,0.0273,False,0.909,0.091,"(-0.081, 0.409)",False,inconclusive
+calc_width_0.8 s,force_peak_amplitude,-0.0523,0.1374,0.7383,True,0.367,0.633,"(-0.318, 0.213)",False,inconclusive
+calc_width_0.8 s,force_width_0.5 s,0.4071,0.1181,0.0064,False,0.999,0.001,"(0.15, 0.631)",True,positive
+calc_width_0.8 s,force_width_0.2 s,0.4554,0.115,0.0,False,1.0,0.0,"(0.215, 0.658)",True,positive
+calc_width_0.8 s,force_width_0.8 s,0.0968,0.131,0.1202,True,0.773,0.227,"(-0.171, 0.343)",False,inconclusive
+calc_width_0.8 s,force_rise_time_0.2_0.8 s,-0.0528,0.1279,0.7704,True,0.332,0.668,"(-0.309, 0.197)",False,inconclusive
+calc_width_0.8 s,force_rise_time_0.8_max s,0.0381,0.1277,0.1328,True,0.595,0.405,"(-0.202, 0.291)",False,inconclusive
+calc_width_0.8 s,force_decay_time_max_0.8 s,-0.0229,0.12,0.0025,False,0.433,0.567,"(-0.257, 0.208)",False,inconclusive
+calc_width_0.8 s,force_decay_time_0.2_0.8 s,0.0657,0.1312,0.7071,True,0.697,0.303,"(-0.194, 0.321)",False,inconclusive
+calc_width_0.8 s,calc_peak_amplitude,0.0155,0.1308,0.0563,True,0.556,0.444,"(-0.261, 0.266)",False,inconclusive
+calc_width_0.8 s,calc_width_0.5 s,0.5593,0.0999,0.0,False,1.0,0.0,"(0.345, 0.735)",True,positive
+calc_width_0.8 s,calc_width_0.2 s,0.3869,0.1169,0.0,False,0.997,0.003,"(0.135, 0.587)",True,positive
+calc_rise_time_0.2_0.8 s,duration,-0.0352,0.124,0.1691,True,0.379,0.621,"(-0.266, 0.207)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_peak_amplitude,0.0646,0.1215,0.0606,True,0.705,0.295,"(-0.176, 0.303)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_width_0.5 s,-0.2043,0.1231,0.0161,False,0.053,0.947,"(-0.427, 0.042)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_width_0.2 s,-0.1013,0.1269,0.0836,True,0.216,0.784,"(-0.347, 0.149)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_width_0.8 s,0.0513,0.1274,0.4518,True,0.657,0.342,"(-0.195, 0.3)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_rise_time_0.2_0.8 s,0.1496,0.1318,0.3806,True,0.872,0.128,"(-0.112, 0.402)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_rise_time_0.8_max s,-0.0538,0.1348,0.9238,True,0.332,0.668,"(-0.314, 0.213)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_decay_time_max_0.8 s,0.1306,0.1275,0.4244,True,0.856,0.144,"(-0.122, 0.368)",False,inconclusive
+calc_rise_time_0.2_0.8 s,force_decay_time_0.2_0.8 s,-0.0381,0.1272,0.5682,True,0.381,0.619,"(-0.292, 0.202)",False,inconclusive
+calc_rise_time_0.2_0.8 s,calc_peak_amplitude,0.144,0.1338,0.2508,True,0.844,0.156,"(-0.111, 0.391)",False,inconclusive
+calc_rise_time_0.2_0.8 s,calc_width_0.5 s,-0.0945,0.1355,0.598,True,0.235,0.765,"(-0.352, 0.181)",False,inconclusive
+calc_rise_time_0.2_0.8 s,calc_width_0.2 s,-0.1347,0.1362,0.7231,True,0.154,0.845,"(-0.412, 0.136)",False,inconclusive
+calc_rise_time_0.2_0.8 s,calc_width_0.8 s,-0.2208,0.1204,0.2761,True,0.038,0.962,"(-0.448, 0.025)",False,inconclusive
+calc_rise_time_0.8_max s,duration,-0.0415,0.1242,0.2522,True,0.362,0.638,"(-0.281, 0.203)",False,inconclusive
+calc_rise_time_0.8_max s,force_peak_amplitude,-0.0609,0.1374,0.3458,True,0.309,0.691,"(-0.312, 0.225)",False,inconclusive
+calc_rise_time_0.8_max s,force_width_0.5 s,0.2071,0.1302,0.7089,True,0.933,0.067,"(-0.054, 0.45)",False,inconclusive
+calc_rise_time_0.8_max s,force_width_0.2 s,0.2948,0.1227,0.5173,True,0.99,0.01,"(0.057, 0.528)",True,positive
+calc_rise_time_0.8_max s,force_width_0.8 s,0.1683,0.1281,0.2706,True,0.902,0.098,"(-0.089, 0.41)",False,inconclusive
+calc_rise_time_0.8_max s,force_rise_time_0.2_0.8 s,0.0627,0.1294,0.0521,True,0.7,0.3,"(-0.2, 0.312)",False,inconclusive
+calc_rise_time_0.8_max s,force_rise_time_0.8_max s,-0.0281,0.1326,0.4685,True,0.41,0.59,"(-0.279, 0.25)",False,inconclusive
+calc_rise_time_0.8_max s,force_decay_time_max_0.8 s,-0.0995,0.1278,0.7309,True,0.218,0.782,"(-0.341, 0.146)",False,inconclusive
+calc_rise_time_0.8_max s,force_decay_time_0.2_0.8 s,0.0302,0.1405,0.7951,True,0.585,0.415,"(-0.234, 0.307)",False,inconclusive
+calc_rise_time_0.8_max s,calc_peak_amplitude,-0.1595,0.1199,0.0637,True,0.093,0.907,"(-0.385, 0.087)",False,inconclusive
+calc_rise_time_0.8_max s,calc_width_0.5 s,0.3423,0.1118,0.0186,False,0.999,0.001,"(0.118, 0.539)",True,positive
+calc_rise_time_0.8_max s,calc_width_0.2 s,0.2795,0.1189,0.0063,False,0.987,0.013,"(0.032, 0.502)",True,positive
+calc_rise_time_0.8_max s,calc_width_0.8 s,0.3053,0.1176,0.0003,False,0.991,0.009,"(0.068, 0.515)",True,positive
+calc_rise_time_0.8_max s,calc_rise_time_0.2_0.8 s,-0.0677,0.1296,0.8955,True,0.305,0.695,"(-0.313, 0.179)",False,inconclusive
+calc_decay_time_max_0.8 s,duration,0.1289,0.1362,0.177,True,0.823,0.177,"(-0.135, 0.383)",False,inconclusive
+calc_decay_time_max_0.8 s,force_peak_amplitude,-0.0711,0.1379,0.8946,True,0.302,0.698,"(-0.353, 0.201)",False,inconclusive
+calc_decay_time_max_0.8 s,force_width_0.5 s,0.2127,0.1274,0.5173,True,0.952,0.048,"(-0.046, 0.447)",False,inconclusive
+calc_decay_time_max_0.8 s,force_width_0.2 s,0.2521,0.1247,0.1105,True,0.974,0.026,"(-0.004, 0.489)",False,inconclusive
+calc_decay_time_max_0.8 s,force_width_0.8 s,0.0351,0.1186,0.8362,True,0.625,0.374,"(-0.208, 0.261)",False,inconclusive
+calc_decay_time_max_0.8 s,force_rise_time_0.2_0.8 s,-0.1075,0.127,0.3254,True,0.206,0.794,"(-0.344, 0.138)",False,inconclusive
+calc_decay_time_max_0.8 s,force_rise_time_0.8_max s,0.1062,0.129,0.9422,True,0.795,0.205,"(-0.153, 0.353)",False,inconclusive
+calc_decay_time_max_0.8 s,force_decay_time_max_0.8 s,0.0074,0.1211,0.2795,True,0.518,0.482,"(-0.217, 0.243)",False,inconclusive
+calc_decay_time_max_0.8 s,force_decay_time_0.2_0.8 s,-0.0391,0.1376,0.4169,True,0.401,0.599,"(-0.315, 0.224)",False,inconclusive
+calc_decay_time_max_0.8 s,calc_peak_amplitude,0.0165,0.1249,0.1206,True,0.574,0.426,"(-0.24, 0.26)",False,inconclusive
+calc_decay_time_max_0.8 s,calc_width_0.5 s,0.2862,0.1263,0.0709,True,0.984,0.016,"(0.031, 0.525)",True,positive
+calc_decay_time_max_0.8 s,calc_width_0.2 s,0.2364,0.1319,0.0251,False,0.958,0.042,"(-0.032, 0.478)",False,inconclusive
+calc_decay_time_max_0.8 s,calc_width_0.8 s,0.6634,0.08,0.0,False,1.0,0.0,"(0.494, 0.798)",True,positive
+calc_decay_time_max_0.8 s,calc_rise_time_0.2_0.8 s,-0.1942,0.1228,0.0266,False,0.062,0.938,"(-0.419, 0.056)",False,inconclusive
+calc_decay_time_max_0.8 s,calc_rise_time_0.8_max s,-0.2431,0.1212,0.3585,True,0.022,0.978,"(-0.473, -0.007)",True,negative
+calc_decay_time_0.2_0.8 s,duration,-0.4607,0.1159,0.0635,True,0.0,1.0,"(-0.684, -0.233)",True,negative
+calc_decay_time_0.2_0.8 s,force_peak_amplitude,-0.7236,0.0567,0.0,False,0.0,1.0,"(-0.818, -0.594)",True,negative
+calc_decay_time_0.2_0.8 s,force_width_0.5 s,-0.0164,0.1329,0.6489,True,0.456,0.544,"(-0.271, 0.238)",False,inconclusive
+calc_decay_time_0.2_0.8 s,force_width_0.2 s,0.0941,0.1397,0.0004,False,0.761,0.239,"(-0.199, 0.344)",False,inconclusive
+calc_decay_time_0.2_0.8 s,force_width_0.8 s,-0.1805,0.1192,0.0409,False,0.065,0.935,"(-0.399, 0.074)",False,inconclusive
+calc_decay_time_0.2_0.8 s,force_rise_time_0.2_0.8 s,0.3907,0.1195,0.0,False,0.998,0.002,"(0.141, 0.594)",True,positive
+calc_decay_time_0.2_0.8 s,force_rise_time_0.8_max s,0.0728,0.1252,0.9595,True,0.724,0.276,"(-0.169, 0.317)",False,inconclusive
+calc_decay_time_0.2_0.8 s,force_decay_time_max_0.8 s,-0.0479,0.131,0.3582,True,0.346,0.654,"(-0.314, 0.219)",False,inconclusive
+calc_decay_time_0.2_0.8 s,force_decay_time_0.2_0.8 s,-0.1648,0.1127,0.666,True,0.078,0.922,"(-0.377, 0.058)",False,inconclusive
+calc_decay_time_0.2_0.8 s,calc_peak_amplitude,-0.3548,0.1109,0.0006,False,0.003,0.997,"(-0.556, -0.138)",True,negative
+calc_decay_time_0.2_0.8 s,calc_width_0.5 s,0.671,0.0811,0.0,False,1.0,0.0,"(0.497, 0.804)",True,positive
+calc_decay_time_0.2_0.8 s,calc_width_0.2 s,0.9416,0.0178,0.0,False,1.0,0.0,"(0.9, 0.968)",True,positive
+calc_decay_time_0.2_0.8 s,calc_width_0.8 s,0.1869,0.1287,0.0013,False,0.919,0.081,"(-0.089, 0.418)",False,inconclusive
+calc_decay_time_0.2_0.8 s,calc_rise_time_0.2_0.8 s,-0.1381,0.1348,0.8968,True,0.151,0.849,"(-0.411, 0.131)",False,inconclusive
+calc_decay_time_0.2_0.8 s,calc_rise_time_0.8_max s,0.1989,0.1242,0.025,False,0.936,0.064,"(-0.065, 0.441)",False,inconclusive
+calc_decay_time_0.2_0.8 s,calc_decay_time_max_0.8 s,0.1026,0.1367,0.1636,True,0.774,0.226,"(-0.178, 0.361)",False,inconclusive
+local_frequency[Hz],duration,0.1935,0.1342,0.6148,True,0.927,0.073,"(-0.063, 0.455)",False,inconclusive
+local_frequency[Hz],force_peak_amplitude,0.5173,0.051,0.0,False,1.0,0.0,"(0.394, 0.594)",True,positive
+local_frequency[Hz],force_width_0.5 s,-0.2989,0.117,0.0,False,0.011,0.989,"(-0.503, -0.038)",True,negative
+local_frequency[Hz],force_width_0.2 s,-0.1948,0.1457,0.0,False,0.111,0.889,"(-0.445, 0.118)",False,inconclusive
+local_frequency[Hz],force_width_0.8 s,0.1499,0.1179,0.243,True,0.896,0.104,"(-0.087, 0.367)",False,inconclusive
+local_frequency[Hz],force_rise_time_0.2_0.8 s,-0.193,0.1372,0.0272,False,0.078,0.922,"(-0.448, 0.075)",False,inconclusive
+local_frequency[Hz],force_rise_time_0.8_max s,-0.1278,0.1258,0.7486,True,0.154,0.846,"(-0.373, 0.113)",False,inconclusive
+local_frequency[Hz],force_decay_time_max_0.8 s,-0.0288,0.1257,0.0451,False,0.4,0.6,"(-0.264, 0.22)",False,inconclusive
+local_frequency[Hz],force_decay_time_0.2_0.8 s,0.1564,0.1191,0.84,True,0.902,0.098,"(-0.081, 0.392)",False,inconclusive
+local_frequency[Hz],calc_peak_amplitude,0.3419,0.106,0.0058,False,0.999,0.001,"(0.124, 0.535)",True,positive
+local_frequency[Hz],calc_width_0.5 s,-0.6966,0.0754,0.0,False,0.0,1.0,"(-0.822, -0.529)",True,negative
+local_frequency[Hz],calc_width_0.2 s,-0.7121,0.078,0.0,False,0.0,1.0,"(-0.84, -0.536)",True,negative
+local_frequency[Hz],calc_width_0.8 s,-0.3531,0.119,0.0001,False,0.006,0.994,"(-0.565, -0.121)",True,negative
+local_frequency[Hz],calc_rise_time_0.2_0.8 s,0.244,0.1321,0.074,True,0.963,0.037,"(-0.032, 0.492)",False,inconclusive
+local_frequency[Hz],calc_rise_time_0.8_max s,-0.1172,0.1176,0.0547,True,0.153,0.847,"(-0.336, 0.117)",False,inconclusive
+local_frequency[Hz],calc_decay_time_max_0.8 s,-0.3114,0.1152,0.3956,True,0.003,0.997,"(-0.529, -0.082)",True,negative
+local_frequency[Hz],calc_decay_time_0.2_0.8 s,-0.7105,0.0756,0.0,False,0.0,1.0,"(-0.833, -0.539)",True,negative
