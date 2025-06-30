@@ -1,0 +1,31 @@
+{
+  "n_original_features": 18,
+  "n_selected_features": 13,
+  "n_pca_components": 7,
+  "explained_variance": 0.95,
+  "dbscan_eps": 0.2,
+  "dbscan_min_samples": 2,
+  "n_clusters": 1,
+  "n_independent_features": 12,
+  "selected_feature_names": [
+    "duration",
+    "force_width_0.2 s",
+    "force_rise_time_0.8_max s",
+    "force_decay_time_max_0.8 s",
+    "calc_peak_amplitude",
+    "calc_width_0.5 s",
+    "calc_width_0.2 s",
+    "calc_width_0.8 s",
+    "calc_rise_time_0.2_0.8 s",
+    "calc_rise_time_0.8_max s",
+    "calc_decay_time_max_0.8 s",
+    "calc_decay_time_0.2_0.8 s",
+    "local_frequency[Hz]"
+  ],
+  "cluster_summary": {
+    "0": {
+      "size": 6,
+      "representative_feature": "force_peak_amplitude"
+    }
+  }
+}

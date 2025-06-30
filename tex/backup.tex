@@ -1,0 +1,40 @@
+The next phase of analysis after evaluating hypothesis and determing drug significance 
+is to determine the relative effect of the drug on the biological feautres and 
+how they are varying under difference concentrations of the drug. This is done by the application
+of Hill fitting to model the drug response curves and finding the EC50/IC50 values (Section \ref{sec:hillfitting}). The EC50 values
+are the concentration of the drug at which the response is half of the maximum response. The IC50 values
+are the concentration of the drug at which the response is half of the maximum inhibition.
+The determined EC50/IC50 values are used for relative comparison (Section \ref{sec:relative_comparison}) of the drug effect on the biological features to baseline.
+Finally, a systematic strategy for finding out features which are behaving similar to different drug concentrations based on 
+Principal Components Influence Analysis is presented in (Section \ref{sec:pcia}).
+
+
+\section {Hill Fitting}
+\label{sec:hillfitting}
+Hill fitting is a method used to model the drug response curves. The Hill equation is given by:
+## convert it into latex equation
+E/E_max = [A]^n / (EC^50 + [A]^n)
+where E is the response, E_max is the maximum response, A is the concentration of the drug, EC50 is the concentration of the drug at which the response is half of the maximum response and n is the Hill coefficient. The Hill coefficient is a measure of the steepness of the curve. 
+
+For our analysis, we selected four features, namely Field potential Duration (shown as duration), Force and Calcium Peak Amplitudes and Local Frequency and fitted the 
+Hill equation to Calcium Titration experiement and Nifedipine data. E-4031 was not considered as it only had three concentrations and was not enough to fit the Hill equation. 
+The response were average over different tissues and normalized between 0 and 1. The Hill equation was fitted using the Hillfit (\ref{link:hillfit}) package in Python. (Figure \ref{fig:hill_analysis}).
+The EC50/IC50 values were determined from the Hill fitting and the closest available concentration value to the mean of these values was taken as the final EC50/IC50 value for the drug. It was 1.0 um For both Nifedipine (~0.91 um) and Calicum Titration (1.22 um). The EC50/IC50 values were then used for relative comparison of the drug effect on the biological features to baseline in the next section.
+
+\section {Relative Comparison of Drug Effect}
+\label{sec:relative_comparison}
+The EC50/IC50 values were used for relative comparison of the drug effect on the biological features to baseline. The baseline experiments setup for each drug was merge 
+and the mean of the feature values was calculated and kept at 100%. The mean of the feature values across tissue at the determined EC50/IC50 concentration from previous section was determined.
+The percent relative change of these values from the baseline was calculated and plotted in Figure \ref{fig:mean_relative_change_baseline_ec50}. For E-4031, the largest concentration available (0.003 um) was used instead of the EC50 value. 
+
+This analysis aid in characterizing the drug effect on the biological features in comparision to baseline. 
+
+\section {Principal Components Influence Analysis}
+\label{sec:pcia}
+After determining relative drug effects, a systematic approch to find out features which are behaving similar to different drug concentrations i.e they are varying in a similar manner is presented.
+
+The methodology is based on application of Prinicipal Component Analysis (PCA) and DBSCAN. Specifically, the PCA is applied to the data for each drug containing different concentrations.
+The components with 0.95 variance are selected and the feature contribution (i.e Loadings) to these components are clustered using DBSCAN. 
+The parameters of DBSCAN are set to min_samples=2 as even if two features are behaving similar, they should be considered. 
+For determining the epsilon (eps) value, the k-nearest neighbors distance for the feautres are calculated with K set to 2 (\ref{cite:dbscan-heruistics}). 
+The knee point of sorted distance plot was determined through Kneedle algorithm [\ref{link:kneedle}] and the epsilon value was set to the distance at the knee point.

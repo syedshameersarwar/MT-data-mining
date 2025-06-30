@@ -11,6 +11,7 @@ A comprehensive computational pipeline for analyzing cardiac signal relationship
 - [Project Structure](#project-structure)
 - [Phase 1: Feature Extraction](#phase-1-feature-extraction)
 - [Phase 2: Statistical Analysis](#phase-2-statistical-analysis)
+- [Phase 3: Advanced Analytics](#phase-3-advanced-analytics)
 - [Dependencies](#dependencies)
 - [Troubleshooting](#troubleshooting)
 
@@ -22,6 +23,10 @@ This pipeline provides a complete workflow for cardiac electrophysiology researc
 - **Statistical Modeling**: Advanced mixed-effects modeling and hypothesis testing for treatment effects
 - **Dose-Response Curves**: Hill equation fitting for pharmacological parameter estimation
 - **Correlation Analysis**: Bootstrap-based correlation analysis with uncertainty quantification
+- **Dimensionality Reduction and Feature Clustering**: t-SNE analysis for high-dimensional feature visualization and Principle Feature Analysis (PFA) based Feature Clustering
+- **Feature Selection**: Principal Feature Analysis (PFA) for optimal feature subset identification
+- **Regression Analysis**: GLMM Lasso regression for feature relationship modeling
+- **Relative Comparison**: Multi-level comparison analysis for drug effects
 - **Publication-Quality Visualization**: LaTeX-compatible figures for thesis and journal submission
 
 ### Supported Drug Treatments
@@ -33,6 +38,10 @@ This pipeline provides a complete workflow for cardiac electrophysiology researc
 - Mixed-effects statistical modeling with R integration
 - Hill equation fitting for EC50/IC50 estimation
 - Bootstrap correlation analysis with confidence intervals
+- t-SNE dimensionality reduction with configurable parameters
+- Principal Feature Analysis with automatic clustering
+- GLMM Lasso regression for sparse feature selection
+- Multi-level relative comparison analysis
 - Comprehensive visualization suite for publication
 
 ## Scientific Background
@@ -153,7 +162,7 @@ cardiac-analysis/
 │   ├── main.py                 # Main extraction pipeline
 │   ├── common.py               # Common feature extraction utilities
 │   ├── fp.py                   # Field potential feature extraction
-├── analysis/                   # Phase 2: Statistical analysis
+├── analysis/                   # Phase 2 & 3: Statistical and advanced analysis
 │   ├── significance/           # Mixed-effects statistical modeling
 │   │   ├── main.py            # Statistical analysis pipeline
 │   │   ├── statistical_modeling.py  # R/Python statistical methods
@@ -166,6 +175,24 @@ cardiac-analysis/
 │   │   ├── bootstrapping.py   # Bootstrap statistical methods
 │   │   ├── analyzer.py        # Correlation statistical analysis
 │   │   └── visualizer.py      # Correlation visualization
+│   ├── tsne/                  # t-SNE dimensionality reduction analysis
+│   │   ├── main.py            # t-SNE analysis pipeline
+│   │   ├── tsne_analyzer.py   # t-SNE statistical methods
+│   │   └── tsne_visualizer.py # t-SNE visualization
+│   ├── regression/            # GLMM Lasso regression analysis
+│   │   ├── main.py            # Regression analysis pipeline
+│   │   ├── regression_analyzer.py  # Regression statistical methods
+│   │   ├── regression_visualizer.py # Regression visualization
+│   │   └── glmmLasso.R        # R script for GLMM Lasso
+│   ├── pfa/                   # Principal Feature Analysis
+│   │   ├── main.py            # PFA analysis pipeline
+│   │   ├── pfa_analyzer.py    # PFA statistical methods
+│   │   ├── pfa_visualizer.py  # PFA visualization
+│   │   └── glmmLasso.R        # R script for GLMM Lasso
+│   ├── relative-comparison/   # Relative comparison analysis
+│   │   ├── main.py            # Relative comparison pipeline
+│   │   ├── relative_comparison_analyzer.py  # Comparison methods
+│   │   └── relative_comparison_visualizer.py # Comparison visualization
 │   └── utils.py               # Shared utilities and data handling for analysis
 ├── utils/                     # Shared utilities and data handling for feature extraction and general analysis
 ├── requirements.txt           # Python dependencies
@@ -421,6 +448,277 @@ correlation_results/
         └── drug_correlations_comparison_numbered.pdf   # Compact numbered version
 ```
 
+## Phase 3: Advanced Analytics
+
+### Overview
+The advanced analytics phase provides four complementary approaches for deep analysis of cardiac signal relationships, feature selection, and drug effect characterization.
+
+> **Important**: All analysis commands must be run from the `analysis/` root directory due to the shared utilities import structure. Do not run commands from individual subdirectories.
+
+### 1. t-SNE Dimensionality Reduction Analysis
+
+#### Purpose
+t-SNE (t-Distributed Stochastic Neighbor Embedding) analysis for visualizing high-dimensional cardiac feature relationships in 2D space. This analysis reveals drug-specific clustering patterns and tissue-level variability in feature space.
+
+#### Usage
+```bash
+cd analysis
+
+# Standard t-SNE analysis with default parameters
+python tsne/main.py \
+    --data-path "/path/to/extracted/features" \
+    --output-path "./tsne_results"
+
+# Custom feature subset analysis
+python tsne/main.py \
+    --data-path "/path/to/features" \
+    --output-path "./custom_tsne" \
+    --selected-features "duration" "force_peak_amplitude" "calc_peak_amplitude" \
+    --perplexity 25.0 \
+    --random-state 42
+
+# Analysis without feature standardization
+python tsne/main.py \
+    --no-standard-scaling \
+    --output-path "./tsne_no_scaling"
+```
+
+#### Parameters
+
+| Parameter | Description | Required | Default |
+|-----------|-------------|----------|---------|
+| `--data-path` | Path to directory containing HDF5 feature files | Yes | - |
+| `--output-path` | Directory for saving results and plots | No | `./outputs/TSneAnalysis` |
+| `--selected-features` | Subset of features for analysis | No | All features |
+| `--random-state` | Random seed for reproducible results | No | 42 |
+| `--perplexity` | t-SNE perplexity parameter | No | 30.0 |
+| `--n-components` | Number of t-SNE components | No | 2 |
+| `--n-iterations` | Number of t-SNE iterations | No | 1000 |
+| `--no-standard-scaling` | Disable standard scaling of features | No | False (scaling enabled) |
+
+#### Special Requirements
+- **Standard Scaling**: By default, features are standardized (mean=0, std=1) before t-SNE analysis. Use `--no-standard-scaling` to preserve original feature scales.
+- **Feature Selection**: Large feature sets may require longer computation time. Consider using `--selected-features` for focused analysis.
+
+#### Output Structure
+```
+tsne_results/
+├── data/
+│   ├── tsne_results.csv              # Complete t-SNE embeddings
+│   ├── averaged_tsne_data.csv        # Tissue-concentration averaged data
+│   └── analysis_summary.json         # Analysis metadata and statistics
+└── plots/
+    └── drug_wise_global_tsne_averaged.pdf  # Publication-quality t-SNE plot
+```
+
+### 2. GLMM Lasso Regression Analysis
+
+#### Purpose
+Generalized Linear Mixed Model (GLMM) Lasso regression analysis for identifying sparse feature relationships and understanding drug-specific changes in feature interdependencies.
+
+#### Usage
+```bash
+cd analysis
+
+# Complete regression analysis for all drugs
+python regression/main.py \
+    --data-path "/path/to/extracted/features" \
+    --output-path "./regression_results"
+
+# Analysis for specific drugs only
+python regression/main.py \
+    --data-path "/path/to/features" \
+    --drugs "baseline" "e4031" "nifedipine" \
+    --output-path "./selective_regression"
+
+# Analysis without visualization
+python regression/main.py \
+    --no-visualization \
+    --output-path "./regression_data_only"
+```
+
+#### Parameters
+
+| Parameter | Description | Required | Default |
+|-----------|-------------|----------|---------|
+| `--data-path` | Path to directory containing HDF5 feature files | Yes | - |
+| `--output-path` | Directory for saving data results | No | `./outputs/RegressionAnalysis/data` |
+| `--plots-path` | Directory for saving plots | No | `./outputs/RegressionAnalysis/plots` |
+| `--drugs` | Drugs to analyze | No | All drugs |
+| `--r-script-path` | Path to GLMM Lasso R script | No | `glmmLasso.R` |
+| `--no-visualization` | Skip visualization generation | No | False |
+| `--verbose` | Enable verbose logging | No | False |
+
+#### Special Requirements
+- **R Dependencies**: Requires additional R packages: `glmmLasso`, `MASS`, `nlme`, `lme4`, `lmerTest`
+- **R Script**: Uses custom R script (`glmmLasso.R`) for GLMM Lasso implementation
+- **Memory**: May require significant memory for large datasets
+
+#### Output Structure
+```
+regression_results/
+├── data/
+│   ├── baseline_data.csv              # Baseline regression data
+│   ├── baseline_frequency_table.csv   # Baseline frequency table
+│   ├── baseline_coefficient_matrix.csv # Baseline coefficient matrix
+│   ├── baseline_weight_matrix.csv     # Baseline weight matrix (R output)
+│   ├── e4031_data.csv                 # E-4031 regression data
+│   ├── e4031_frequency_table.csv      # E-4031 frequency table
+│   ├── e4031_coefficient_matrix.csv   # E-4031 coefficient matrix
+│   ├── e4031_weight_matrix.csv        # E-4031 weight matrix (R output)
+│   ├── nifedipine_data.csv            # Nifedipine regression data
+│   ├── nifedipine_frequency_table.csv # Nifedipine frequency table
+│   ├── nifedipine_coefficient_matrix.csv # Nifedipine coefficient matrix
+│   ├── nifedipine_weight_matrix.csv   # Nifedipine weight matrix (R output)
+│   ├── ca_titration_data.csv          # Ca²⁺ titration regression data
+│   ├── ca_titration_frequency_table.csv # Ca²⁺ titration frequency table
+│   ├── ca_titration_coefficient_matrix.csv # Ca²⁺ titration coefficient matrix
+│   ├── ca_titration_weight_matrix.csv # Ca²⁺ titration weight matrix (R output)
+│   ├── glmmLasso.R                    # R script used for analysis
+│   └── regression_analysis_report.txt # Analysis summary report
+└── plots/
+    ├── baseline_nifedipine_comparison.pdf # Baseline vs Nifedipine comparison
+    └── e4031_ca_titration_comparison.pdf  # E-4031 vs Ca²⁺ titration comparison
+```
+
+### 3. Principal Feature Analysis (PFA)
+
+#### Purpose
+Principal Feature Analysis for automatic feature selection and redundancy reduction. PFA combines PCA decomposition with DBSCAN clustering to identify representative features from each functional group.
+
+#### Usage
+```bash
+cd analysis
+
+# Standard PFA analysis with default parameters
+python pfa/main.py \
+    --data-path "/path/to/extracted/features" \
+    --output-path "./pfa_results"
+
+# Custom parameter analysis
+python pfa/main.py \
+    --data-path "/path/to/features" \
+    --output-path "./custom_pfa" \
+    --explained-var 0.90 \
+    --min-samples 3 \
+    --eps 0.1
+
+# High precision analysis
+python pfa/main.py \
+    --explained-var 0.98 \
+    --min-samples 2 \
+    --output-path "./high_precision_pfa"
+```
+
+#### Parameters
+
+| Parameter | Description | Required | Default |
+|-----------|-------------|----------|---------|
+| `--data-path` | Path to directory containing HDF5 feature files | Yes | - |
+| `--output-path` | Directory for saving results and plots | No | `./outputs/PfaAnalysis` |
+| `--explained-var` | Target explained variance for PCA | No | 0.95 |
+| `--min-samples` | DBSCAN min_samples parameter | No | 2 |
+| `--eps` | DBSCAN epsilon parameter (auto-determined if None) | No | None |
+
+#### Special Requirements
+- **Knee Detection**: Automatically determines optimal DBSCAN epsilon using knee detection algorithm
+- **Feature Reduction**: Typically reduces feature set by 40-70% while preserving physiological information
+- **Clustering**: Groups features with similar PCA contributions for redundancy elimination
+
+#### Output Structure
+```
+pfa_results/
+├── data/
+│   ├── selected_features_e4031.json      # Selected features for E-4031
+│   ├── selected_features_nifedipine.json # Selected features for Nifedipine
+│   ├── selected_features_ca_titration.json # Selected features for Ca²⁺ titration
+│   ├── analysis_summary_e4031.json       # Analysis summary for E-4031
+│   ├── analysis_summary_nifedipine.json  # Analysis summary for Nifedipine
+│   ├── analysis_summary_ca_titration.json # Analysis summary for Ca²⁺ titration
+│   ├── pca_components_e4031.csv          # Subset of PCA components for E-4031
+│   ├── pca_components_nifedipine.csv     # Subset of PCA components for Nifedipine
+│   └── pca_components_ca_titration.csv   # Subset of PCA components for Ca²⁺ titration
+└── plots/
+    └── drugs/
+        ├── e4031/
+        │   ├── pfa_dbscan_cluster_report_e4031.pdf
+        │   ├── pfa_dbscan_kneedle_curve_e4031.pdf
+        │   └── pfa_dbscan_explained_variance_e4031.pdf
+        ├── nifedipine/
+        │   ├── pfa_dbscan_cluster_report_nifedipine.pdf
+        │   ├── pfa_dbscan_kneedle_curve_nifedipine.pdf
+        │   └── pfa_dbscan_explained_variance_nifedipine.pdf
+        └── ca_titration/
+            ├── pfa_dbscan_cluster_report_ca_titration.pdf
+            ├── pfa_dbscan_kneedle_curve_ca_titration.pdf
+            └── pfa_dbscan_explained_variance_ca_titration.pdf
+```
+
+### 4. Relative Comparison Analysis
+
+#### Purpose
+Multi-level relative comparison analysis for understanding drug effects across different analysis scales: tissue-specific changes, global averages, and target concentration comparisons (EC50/IC50).
+
+#### Usage
+```bash
+cd analysis
+
+# Standard relative comparison analysis
+python relative-comparison/main.py \
+    --data-path "/path/to/extracted/features" \
+    --output-path "./relative_comparison_results"
+
+# Analysis with EC50/IC50 target concentrations
+python relative-comparison/main.py \
+    --data-path "/path/to/features" \
+    --output-path "./target_concentration_analysis" \
+    --target-concentrations 0.03 1.0 1.0
+
+# Analysis without saving results or plots
+python relative-comparison/main.py \
+    --data-path "/path/to/features" \
+    --output-path "./analysis_only" \
+    --no-save-results \
+    --no-save-plots
+```
+
+#### Parameters
+
+| Parameter | Description | Required | Default |
+|-----------|-------------|----------|---------|
+| `--data-path` | Path to directory containing HDF5 feature files | Yes | - |
+| `--output-path` | Directory for saving results and plots | No | `./outputs/RelativeComparison` |
+| `--target-concentrations` | Target concentrations for EC50/IC50 analysis [e4031, nifedipine, ca_titration] | No | [0.03, 1.0, 1.0] |
+| `--no-save-results` | Do not save analysis results to CSV files | No | False |
+| `--no-save-plots` | Do not save plots to PDF files | No | False |
+| `--verbose` | Enable verbose logging | No | False |
+
+#### Special Requirements
+- **Target Concentrations**: Specify EC50/IC50 concentrations for each drug to enable concentration-specific analysis (Default: [0.03, 1.0, 1.0] for e4031, nifedipine, and ca_titration)
+- **Multi-level Analysis**: Performs tissue-specific, global, and target concentration comparisons
+- **Comprehensive Output**: Generates extensive comparison matrices and visualizations
+
+#### Output Structure
+```
+relative_comparison_results/
+├── tissue_specific_mean_features.csv      # Tissue-level mean feature values
+├── tissue_specific_relative_differences.csv # Tissue-level relative changes
+├── global_mean_features.csv               # Global mean feature values
+├── global_relative_differences.csv        # Global relative changes
+├── target_concentration_mean_features.csv # EC50/IC50 concentration mean features
+├── target_concentration_relative_differences.csv # EC50/IC50 concentration changes
+├── global/
+│   ├── global_mean_relative_changes.pdf   # Global mean relative changes plot
+│   └── ec_ic50_mean_relative_changes.pdf  # EC50/IC50 mean relative changes plot
+└── drugs/
+    ├── e-4031/
+    │   └── relative_differences_e4031.pdf # E-4031 relative differences plot
+    ├── nifedipine/
+    │   └── relative_differences_nifedipine.pdf # Nifedipine relative differences plot
+    └── ca-titration/
+        └── relative_differences_ca_titration.pdf # Ca²⁺ titration relative differences plot
+```
+
 ## Dependencies
 
 ### Python Dependencies (requirements.txt)
@@ -453,13 +751,16 @@ PyWavelets>=1.4.0
 
 # Hill fitting for dose-response analysis
 hillfit>=0.1.0
+
 # File handling and utilities
-pathlib2>=2.3.6
-argparse  # Built-in but explicit for clarity
 h5py>=3.1.0  # For HDF5 file handling in feature extraction
 tables>=3.7.0
+
 # Web framework for plotly interactive plots
 kaleido>=0.2.1  # For plotly static image export
+
+# Advanced analytics dependencies
+kneed==0.8.5  # For knee detection in PFA analysis
 
 # Development and testing (optional)
 pytest>=6.0.0
@@ -478,7 +779,11 @@ install.packages(c(
     "great_tables",  # Publication-quality tables
     "dplyr",         # Data manipulation
     "tidyr",         # Data reshaping
-    "ggplot2"        # Plotting (optional)
+    "ggplot2",       # Plotting (optional)
+    "glmmLasso",     # GLMM Lasso regression (for regression analysis)
+    "MASS",          # Statistical functions
+    "nlme",          # Nonlinear mixed-effects models
+    "lme4"           # Linear mixed-effects models
 ))
 ```
 
@@ -492,7 +797,7 @@ source cardiac_env/bin/activate
 pip install -r requirements.txt
 
 # Install R packages (in R console)
-R -e "install.packages(c('lmerTest', 'multcomp', 'broom.mixed', 'great_tables'))"
+R -e "install.packages(c('lmerTest', 'multcomp', 'broom.mixed', 'great_tables', 'glmmLasso', 'MASS', 'nlme', 'lme4'))"
 ```
 
 ### 2. Feature Extraction
@@ -528,6 +833,43 @@ python hill-fitting/main.py \
 python correlation-bootstrapping/main.py \
     --data-path "../extracted_features" \
     --output-path "./correlation_analysis"
+```
+
+### 6. Advanced Analytics
+
+#### t-SNE Analysis
+```bash
+# Already in analysis directory
+python tsne/main.py \
+    --data-path "../extracted_features" \
+    --output-path "./tsne_analysis" \
+    --selected-features "duration" "force_peak_amplitude" "calc_peak_amplitude"
+```
+
+#### Regression Analysis
+```bash
+# Already in analysis directory
+python regression/main.py \
+    --data-path "../extracted_features" \
+    --output-path "./regression_analysis"
+```
+
+#### Principal Feature Analysis
+```bash
+# Already in analysis directory
+python pfa/main.py \
+    --data-path "../extracted_features" \
+    --output-path "./pfa_analysis" \
+    --explained-var 0.95
+```
+
+#### Relative Comparison Analysis
+```bash
+# Already in analysis directory
+python relative-comparison/main.py \
+    --data-path "../extracted_features" \
+    --output-path "./relative_comparison_analysis" \
+    --target-concentrations 0.03 1.0 1.0
 ```
 
 ## Troubleshooting

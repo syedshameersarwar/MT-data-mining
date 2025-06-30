@@ -1,0 +1,57 @@
+GLMM Lasso Regression Analysis Report
+==================================================
+
+ANALYSIS SUMMARY
+--------------------
+Total drugs analyzed: 4
+Drugs: ['baseline', 'e4031', 'nifedipine', 'ca_titration']
+
+BASELINE ANALYSIS
+---------------
+Samples: 93
+Tissues: 4
+Concentrations: 2
+Matrix shape: (18, 18)
+Non-zero coefficients: 302
+
+E4031 ANALYSIS
+---------------
+Samples: 155
+Tissues: 2
+Concentrations: 4
+Matrix shape: (18, 18)
+Non-zero coefficients: 296
+
+NIFEDIPINE ANALYSIS
+---------------
+Samples: 279
+Tissues: 2
+Concentrations: 8
+Matrix shape: (18, 18)
+Non-zero coefficients: 297
+
+CA_TITRATION ANALYSIS
+---------------
+Samples: 341
+Tissues: 2
+Concentrations: 6
+Matrix shape: (18, 18)
+Non-zero coefficients: 300
+
+VISUALIZATION SUMMARY
+-------------------------
+Total plots created: 3
+Drugs visualized: ['baseline', 'e4031', 'nifedipine', 'ca_titration']
+Plot types: ['baseline_nifedipine_comparison', 'e4031_ca_titration_comparison']
+
+OUTPUT FILES
+---------------
+baseline data: outputs/RegressionAnalysis/data/baseline.csv
+baseline coefficients: outputs/RegressionAnalysis/data/baseline_weight_matrix.csv
+e4031 data: outputs/RegressionAnalysis/data/e4031.csv
+e4031 coefficients: outputs/RegressionAnalysis/data/e4031_weight_matrix.csv
+nifedipine data: outputs/RegressionAnalysis/data/nifedipine.csv
+nifedipine coefficients: outputs/RegressionAnalysis/data/nifedipine_weight_matrix.csv
+ca_titration data: outputs/RegressionAnalysis/data/ca_titration.csv
+ca_titration coefficients: outputs/RegressionAnalysis/data/ca_titration_weight_matrix.csv
+

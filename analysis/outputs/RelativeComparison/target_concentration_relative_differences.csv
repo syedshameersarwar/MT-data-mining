@@ -1,0 +1,4 @@
+drug,duration,force_peak_amplitude,force_width_0.5 s,force_width_0.2 s,force_width_0.8 s,force_rise_time_0.2_0.8 s,force_rise_time_0.8_max s,force_decay_time_max_0.8 s,force_decay_time_0.2_0.8 s,calc_peak_amplitude,calc_width_0.5 s,calc_width_0.2 s,calc_width_0.8 s,calc_rise_time_0.2_0.8 s,calc_rise_time_0.8_max s,calc_decay_time_max_0.8 s,calc_decay_time_0.2_0.8 s,local_frequency[Hz]
+e4031 (0.03 µM),23.81,12.04,-5.68,-6.65,-5.72,-7.4,-6.48,-6.84,-7.38,1.95,-12.27,-15.1,-6.84,-1.09,-1.24,-9.99,-22.39,33.27
+nifedipine (1.0 µM),-35.53,-64.43,-29.19,-26.34,-31.95,-19.22,-28.08,-29.78,-28.37,-43.96,-23.96,-21.38,-22.95,-18.69,-21.75,-23.37,-20.71,-3.61
+ca_titration (1.0 µM),8.47,-39.03,-7.89,-7.17,-9.18,0.98,-3.99,-10.87,-11.91,-36.91,-15.06,-16.36,-13.04,9.04,2.88,-21.73,-23.53,73.1
